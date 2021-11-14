@@ -1,0 +1,113 @@
+/** Diseño al contenido**/
+#main-content {
+	background-size:cover;
+	min-height: 100%;
+	width: 100%;
+}
+#home{
+    font-size: 1.5rem;
+    text-align: center;
+}
+#cabezera{
+	background-size:cover;
+	min-height: 100%;
+	color:white;
+	text-align: center;
+}
+
+	#main-content header,
+	#main-content .content {
+		padding: 40px;
+	}
+.contenedor{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    font-size: 2rem;
+    justify-content: center;
+    background-image: url("../img/nave.jpg");
+	background-size:cover;
+	background-attachment: fixed;
+	min-height: 100%;
+    color:rgb(255, 255, 255);
+}
+.elemento{
+    
+    margin:4rem;
+    width:18%;
+    color:rgb(255, 255, 0);
+    text-align: center;
+    font-size:2rem;
+    padding: 2rem;
+    border-radius: 10%;
+    transition: all 0.25s;
+}
+
+.elemento:hover{
+    transform: translateY(-10px);
+}
+
+
+
+.contenedor > div:nth-child(2){ background-color: grey; background-image: url("../img/tanger1.jpg"); background-size:cover; min-height: 100%; }
+.contenedor > div:nth-child(3){ background-color: grey; background-image: url("../img/toreCepsa.jpg"); background-size:cover; min-height: 100%;  }
+.contenedor > div:nth-child(4){ background-color: grey; background-image: url("../img/cafe-código.jpg"); background-size:cover; min-height: 100%; }
+.contenedor > div:nth-child(5){ background-color: grey; background-image: url("../img/IMG-20211006-WA0008.jpg"); background-size:cover; min-height: 100%;  }
+.contenedor > div:nth-child(6){ background-color: grey; background-image: url("../img/codigo.jpg"); background-size:cover; min-height: 100%; }
+
+
+.contenido{
+    
+    display:flex;
+    flex-wrap:nowrap;
+    flex-direction:column;
+    background-color: grey;
+    background-image: url("../img/lava.jpg");
+	background-size:cover;
+    background-attachment: fixed;
+    font-size: 2rem;
+    align-items: center;
+    
+  }
+  .descripcion{
+    display:grid;
+    align-items: center;
+    margin: 5rem;
+    width:85%;
+    color:#FFFFFF;
+    font-size:2rem;
+    padding: 2rem;
+    border-radius: 0.25em;
+    grid-template:
+    "texto contenedorImg"
+    ;
+  }
+  .contenedorImg{
+      text-align: center;
+  }
+  #uno>.contenedorImg>img{
+    width: 25rem;
+    border-radius: 0.5em;
+    }
+  #dos>.contenedorImg>img{
+        width: 25rem;
+        border-radius: 0.5em;
+    }
+    #tres>.contenedorImg>img{
+        font-size: 4rem;
+        background-color: blue ;
+        border-radius: 0.5em;
+    }
+    #cuatro>.contenedorImg>img{
+        width: 15rem;
+        border-radius: 0.5em;
+    }
+    #cinco>.contenedorImg>img{
+        width: 25rem;
+        border-radius: 0.5em;
+    }
+  .contenido > div:nth-child(1){background-color: grey; background-image: url("../img/escaleras.jpg"); background-size:cover; min-height: 100%; margin-top: 8rem;}
+  .contenido > div:nth-child(2){background-color: grey; background-image: url("../img/escaleras.jpg"); background-size:cover; min-height: 100%; }
+  .contenido > div:nth-child(3){background-color: grey; background-image: url("../img/escaleras.jpg"); background-size:cover; min-height: 100%; }
+  .contenido > div:nth-child(4){background-color: grey; background-image: url("../img/escaleras.jpg"); background-size:cover; min-height: 100%; }
+  .contenido > div:nth-child(5){background-color: grey; background-image: url("../img/escaleras.jpg"); background-size:cover; min-height: 100%; }
