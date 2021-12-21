@@ -1,0 +1,23 @@
+img {
+    max-width: 100%;
+    height: auto;
+  }
+  #animacion{
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    //dura 5 segundos y es infinita
+    animation: mymove 5s infinite;
+  }
+  //Es la animación que utilizo para el ejercicio
+  @keyframes mymove {
+    0%   {top: 0px; background: red; width: 100px;}
+    100% {top: 200px; background: yellow; width: 300px;}
+  }
+  //Utilizo los imports para importar los archivos de otro lado
+  @import "componentes/nav.scss";
+  @import "componentes/estilo.scss";
+  @import "componentes/pie.scss";
+
+  

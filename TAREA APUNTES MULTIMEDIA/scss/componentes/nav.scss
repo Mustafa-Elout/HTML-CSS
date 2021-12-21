@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Estilo para el nav */
+
+#main-header {
+	
+	color: white;
+	height: 80px;
+}	
+	#main-header a {
+		color: white;
+	}
+
+#logo-header {
+	float: left;
+	padding: 15px 0 0 20px;
+	text-decoration: none;
+}
+	#logo-header:hover {
+		color: #0b76a6;
+	}
+	
+	#logo-header .site-name {
+		display: block;
+		font-weight: 700;
+		font-size: 1.2em;
+	}
+	
+	#logo-header .site-desc {
+		display: block;
+		font-weight: 300;
+		font-size: 0.8em;
+		color: #999;
+	}
+
+  
+
+     #main-header {
+        background: #333;
+        color: white;
+    }
+/*Estilo contenido*/
+  ul{
+    list-style: none;
+  }
+  #menu li>a{
+
+    background: #333;
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    min-width: 100px;
+  }
+  #menu li>a:hover{
+    color: #000;
+    background-color: #eaeaea;
+  }
+  #menu>li{
+    float: right;
+    text-align:center
+  }
+  #menu>li>ul{
+    display: none;
+  }
+  #menu>li:hover>ul {
+    display:block;
+  }
