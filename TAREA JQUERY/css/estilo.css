@@ -114,9 +114,7 @@ img {
     color:#FFFFFF;
     font-size:2rem;
     padding: 2rem;
-    grid-template:
-    "texto contenedorImg"
-    ;
+
   }
 
   table {
