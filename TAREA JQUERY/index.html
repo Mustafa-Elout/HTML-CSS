@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/estilo.css">
+	<link rel="stylesheet" href="css/nav.css">
+
+    <title>ACTIVIDADES JQUERY</title>
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script>
+		//Ejercicio 1
+		$(document).ready(function(){
+			$("#ejercicio1").click(function(){
+				let ej1=$("#ejercicio1");
+				ej1.hide(5000).show(3000).hide(200);
+				$(ej1).show(2000,function(){
+				alert("He tardado 2 segundos en mostrarme");
+				});
+			});
+		});
+
+		//Ejercicio 2
+		$(document).ready(function(){
+			$("#ejercicio2").mouseover(function(){
+				$("#ejercicio2").fadeTo(400,0.3);
+			});
+			$("#ejercicio2").mouseout(function(){
+				$("#ejercicio2").fadeTo(400,1);
+			});
+		});
+
+		//Ejercicio 3
+		$(document).ready(function(){
+		var clicks = 0;
+			$("#ejercicio3").click(function() {
+				if (clicks == 0){
+					
+					$("#ejercicio3").animate({marginLeft: "400px"});
+					++clicks;
+				} else{
+					$("#ejercicio3").animate({marginLeft: "0px"});
+					clicks = 0;
+				}	
+			});
+		});
+
+		//Ejercicio 5
+	$(document).ready(function(){
+		$('#mayor-edad').click(function(){
+			if($(this).is(':checked')){
+				$("#t1").hide();
+			}else{
+				$("#t1").show();
+			}
+		});
+		$('#socio').click(function(){
+			if($(this).is(':checked')){
+				$("#t2").hide();
+			} else{
+				$("#t2").show();
+			}
+		});
+		$('#tarjeta-regalo').click(function(){
+			if($(this).is(':checked')){
+				$("#t3").hide();
+			} else{
+				$("#t3").show();
+			}
+		});
+	});
+
+	//Ejercicio 6
+	$(document).ready(function(){
+		$('.nota').focus(function () {
+			$(this).css({ 'color': 'red' });
+		});
+
+		$('.nota').blur(function () {
+			$(this).css({ 'color': 'green' });
+		});
+	});
+
+	//Ejercicio 7
+	$(document).ready(function(){
+		$(".selected").find("p").css({ 'background-color': 'yellow' });
+	});
+	</script>
+</head>
+<body>
+    <header id="main-header">
+		
+		<a id="logo-header" href="index.html">
+			<span class="site-name">Moustapaha</span>
+			<span class="site-desc">ACTIVIDADES JQUERY</span>
+		</a> <!-- / #logo-header -->
+
+		<nav>
+			<ul id="menu">
+				<li><a href="">MENU</a>
+				<ul>
+					<li><a href="#uno">Eje 1</a></li>
+					<li><a href="#dos">Eje 2</a></li>
+					<li><a href="#tres">Eje 3</a></li>
+					<!--<li><a href="#cuatro">Eje 4</a></li>-->
+					<li><a href="#cinco">Eje 5</a></li>
+					<li><a href="#seis">Eje 6</a></li>
+					<li><a href="#siete">Eje 7</a></li>
+				</ul>
+				</li>
+			</ul>
+		</nav><!-- / nav -->
+
+	</header><!-- / #main-header -->
+	<main>
+    <section id="main-content">
+        
+
+        <div class="contenedor">
+            <div class="elemento">
+                <h1>ACTIVIDADES JQUERY</h1>
+            </div>
+            <div id="home" class="elemento">
+                <h3>
+					En este sitio web, aparecen distintos ejemplos de JQUERY
+				</h3>
+            </div>
+        </div>
+
+		<div class="contenido">
+			<div id="uno" class="descripcion">
+				<div class="selected">
+					<a id="ejercicio1" href="#ejercicio1">EJERCICIO 1</a><br><br>
+					<h3>Mustafa</h3><br>
+					<p>Esta es una frase de prueba con fondo amarillo</p>
+				</div>
+			</div>
+
+			<div id="dos" class="descripcion">
+				<div class="texto">
+					<h2>EJERCICIO 2</h2>
+					<input id="ejercicio2" type="button" value="Botón">
+				</div>
+			</div>
+
+			<div id="tres" class="descripcion">
+				<div class="selected">
+					<h2>EJERCICIO 3</h2>
+					<input id="ejercicio3" type="button" value="Botón"><br>
+					<p>Esta es una frase de prueba con fondo amarillo</p>
+				</div>
+			</div>
+			<!--<div id="cuatro" class="descripcion">
+				<div id="texto">
+					<h2>ANIMACIÓN</h2>
+				</div>
+			</div>-->
+			<div id="cinco" class="descripcion">
+				<div class="texto">
+					<h2>EJERCICIO 5</h2><br><br>
+					<input type="checkbox" id="mayor-edad" value="opcion"> Mayor de edad<br>
+    				<input type="checkbox"id="socio" value="opcion"> Socio<br>
+    				<input type="checkbox" id="tarjeta-regalo" value="opcion"> Tarjeta de regalo
+					<br><br>
+					<table>
+						<tr id="t1">
+							<td>Debe ir acompañado de un adulto</td>
+						</tr>
+						<tr id="t2">
+							<td>No puede traer invitados</td>
+						</tr>
+						<tr id="t3">
+							<td>Abonará 5% de tasas</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div id="seis" class="descripcion">
+				<div class="texto">
+					<h2>EJERCICIO 6</h2><br>
+					Introduce la nota: <input type="text" name="nota" class="nota" ><br>
+					Asignatura: <input type="text" name="nota" class="nota" ><br>
+					Alumno: <input type="text" name="nota" class="nota" ><br>
+				</div>
+			</div>
+			<div id="siete" class="descripcion">
+				<div class="selected">
+					<p>Esta es una frase de prueba con fondo amarillo</p>
+				</div>
+			</div>
+
+		</div>
+	</section> <!-- / #main-content -->
+	</main>
+	<footer id="main-footer">
+		<p>&copy; 2021 </p>
+		<address>Moustapha El outmani Azzouz</address>
+		<address id="contacto">mustafaeloutmani@gmail.com</address>
+		<p>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer">
+				<img style="border:0;width:88px;height:31px"
+					src="http://jigsaw.w3.org/css-validator/images/vcss"
+					alt="¡CSS Válido!" />
+			</a>
+		</p>
+	</footer> <!-- / #main-footer -->
+
+
+</body>
+</html>
